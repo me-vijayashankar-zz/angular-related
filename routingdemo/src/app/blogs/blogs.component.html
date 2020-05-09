@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row">
+        <div class="card" *ngFor="let blog of blogs" style="width: 18rem;">
+            <div class="card-header">
+                {{blog.title}}
+            </div>
+            <div class="card-body">
+                <h5 class="card-text">{{blog.intro}}
+                    <!-- <p class="card-text">{{blog.body}}</p> -->
+                    <button (click)="showDeptDetails(blog)" [routerLink]="'detail'" class="btn btn-link">Read...</button>
+                </h5>
+            </div>
+        </div>
+    </div>
+    <div class="row text-center">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+{{blogs[0].title}}
